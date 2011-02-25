@@ -1,0 +1,162 @@
+/* Note the css in this project is build from .scss templates - make sure you are editing the scss
+if you want to make changes! */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+
+(see http://meyerweb.com/eric/thoughts/2011/01/03/reset-revisited/ for discussion)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.nojsWarning {
+  display: block;
+  padding: 1em;
+  margin: 1em;
+  border: 1px solid red; }
+  .nojsWarning h1 {
+    font-size: 1.2em;
+    font-weight: bold; }
+
+.js .nojsWarning {
+  display: none; }
+
+.partCssWarning {
+  display: none; }
+
+.no-borderradius .partCssWarning {
+  display: block;
+  padding: 1em;
+  margin: 1em;
+  border: 1px solid red; }
+  .no-borderradius .partCssWarning h1 {
+    font-size: 1.2em;
+    font-weight: bold; }
+
+.oldIeWarning {
+  display: block;
+  padding: 1em;
+  margin: 1em;
+  border: 1px solid red; }
+  .oldIeWarning h1 {
+    font-size: 1.2em;
+    font-weight: bold; }
+
+body {
+  margin: 0px auto;
+  font-size: 18px;
+  font-family: 'OFL Sorts Mill Goudy TT', Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif," "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5; }
+  body > header > h1 {
+    float: left;
+    left: 5px;
+    top: 5px; }
+  body > header > nav {
+    margin: 0 auto;
+    width: 75%;
+    text-transform: lowercase;
+    text-align: center;
+    font-style: italic;
+    font-size: 48px; }
+    body > header > nav li {
+      display: inline;
+      list-style-type: none; }
+      body > header > nav li:not(:last-child):after {
+        content: " ~"; }
+      body > header > nav li a {
+        color: black;
+        text-decoration: none;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); }
+        body > header > nav li a:hover {
+          color: white;
+          text-shadow: 2px 2px 2px black;
+          background-color: #222;
+          -moz-border-radius: 15px;
+          -webkit-border-radius: 15px;
+          border-radius: 15px; }
+      body > header > nav li a {
+        padding: 18px; }
+  body .group:nth-child(odd) {
+    background: #eaeaf2; }
+  body .group > header h1 {
+    display: block;
+    left: 5px;
+    float: left;
+    font-size: 32px;
+    font-style: italic;
+    margin: 18px 0 0; }
+  body .group > ul {
+    display: block;
+    font-size: 48px;
+    margin: 5px auto;
+    width: 80%; }
+    body .group > ul:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+    body .group > ul li {
+      display: block;
+      float: left;
+      list-style-type: none; }
+      body .group > ul li a {
+        color: black;
+        text-decoration: none;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); }
+        body .group > ul li a:hover {
+          color: white;
+          text-shadow: 2px 2px 2px black;
+          background-color: #222;
+          -moz-border-radius: 15px;
+          -webkit-border-radius: 15px;
+          border-radius: 15px; }
+      body .group > ul li a {
+        display: block;
+        padding: 10px 32px; }
+  body > footer {
+    border-top: 1px solid #ddd;
+    margin: 0px 5px;
+    font-size: 14px; }
