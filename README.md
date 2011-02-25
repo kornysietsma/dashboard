@@ -36,8 +36,7 @@ The dashboard.css file is checked in as a convenience - you shouldn't ever edit 
 
 ## Other notes
 This has grown over the years from a range of original html/css files on my local machine.
-I got the original concept from a friend's project somewhere on github - but I have no idea who that was now. sorry.
-I'm happy to give credit if someone can remind me where I met the first dashboard!
+The original concept came from Ryan Allan's dashboard: https://github.com/ryan-allen/dashboard 
 
 see separate TODO.md file for future plans.
 
