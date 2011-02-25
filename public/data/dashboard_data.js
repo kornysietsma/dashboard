@@ -4,6 +4,11 @@ Dashboard.data = {
     spaces: [
         { name: "home",
             groups: [
+                {   name: "Meta",
+                    tags: [
+                        {"title":"The Dashboard project page on GitHub","url":"https://github.com/kornysietsma/dashboard"}
+                    ]
+                },
                 {   name: "Social",
                     tags: [
                         {"title":"Gmail","url":"http://mail.google.com"},
