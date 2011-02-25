@@ -6,6 +6,7 @@ Note this will only work reliably on a modern browser - it might be OK on ie7, b
 Safari and Firefox, and nowhere else.
 
 Goals:
+
 * simple - to deploy, to edit, to understand
 * fast - I could use something like the Google Desktop if I wanted lots of bells and whistles; I just want a clean set of my regularly used bookmarks
 * clear - Every browser has it's own bookmarks, but they are a tiny bar at the top of the page. I want a nice visible set of pages so it's easy on the eyes, and the brain
