@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=OFL+Sorts+Mill+Goudy+TT' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8" />
+    <title>
+      Dashboard
+    </title>
+    <script src="javascript/modernizr-1.6.js"></script>
+    <link rel="stylesheet" href="stylesheets/dashboard.css"/>
+  </head>
+  <body>
+<section class="nojsWarning"><h1>Warning!</h1><p>You appear to have Javascript disabled - this site will not
+work reliably</p></section>
+<section class="partCssWarning"><h1>Warning</h1><p>Some advanced CSS3/html5 features appear to not be supported by your browser.
+    This site is best viewed in Safari 4.0, Google Chrome 5.0, Firefox 3.6, Internet Explorer 8.0 or greater.</p></section>
+<!--[if lt IE 8]>
+<div class="oldIeWarning">
+<h1>Warning!</h1><p>This site will not render correctly on Internet Explorer 7 or older</p>
+</div>
+<![endif]-->
+  <header>
+    <h1>Dashboard</h1>
+      <nav id="spacenav"></nav>
+  </header>
+  <section id="space">
+      <section class="group">
+          <header><h1>Inbox:</h1></header>
+          <ul class="tags">
+              <li><a href="foo"></a></li>
+          </ul>
+      </section>
+      <p>(nothing loaded yet...)</p>
+  </section>
+  <footer><p></p></footer>
+
+<script type="text/html" class="view-template" data-name="spacenav">
+  <ol>
+    {{#spaces}}
+    <li><a href="#{{name}}">{{name}}</a></li>
+    {{/spaces}}
+  </ol>
+</script>
+<script type="text/html" class="view-template" data-name="space">
+    {{#groups}}
+    <section class="group">
+        <header><h1>{{name}}</h1></header>
+        <ul class="tags">
+            {{#tags}}
+            <li><a href="{{url}}" target="_blank">{{title}}</a></li>
+            {{/tags}}
+        </ul>
+    </section>
+    {{/groups}}
+</script>
+<script type="text/html" class="view-template" data-name="loading">
+  <p>{{message}}</p>
+</script>
+<script type="text/html" class="view-template" data-name="errors">
+    <header><h1>Errors:</h1></header>
+    <ul>
+      {{#errors}}
+        <li>
+          <h3>{{title}}</h3>
+          <p>{{timestamp}}</p>
+          {{#text}}
+          <p>{{.}}</p>
+          {{/text}}
+        </li>
+      {{/errors}}
+    </ul>
+</script>
+<script src="javascript/jquery-1.5.js"></script>
+<script src="javascript/underscore.js"></script>
+<script src="javascript/ba-debug.js"></script>
+<script src="javascript/jquery.ba-hashchange.js"></script>
+<script src="javascript/handlebars-0.9.0.pre.4.js"></script>
+<script src="javascript/dashboard.js"></script>
+<script src="data/dashboard_data.js"></script>
+</body>
+</html>
