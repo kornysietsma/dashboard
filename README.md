@@ -5,6 +5,8 @@ very simply - in fact you can host it trivially just by copying the whole "publi
 Note this will only work reliably on a modern browser - it might be OK on ie7, but really it's been tested on Chrome,
 Safari and Firefox, and nowhere else.
 
+See a working sample dashboard at: http://kornysietsma.github.com/dashboard/
+
 Goals:
 
 * simple - to deploy, to edit, to understand
