@@ -82,13 +82,25 @@ table {
     font-size: 1.2em;
     font-weight: bold; }
 
+/* Colours from the solarized project: http://ethanschoonover.com/solarized
+  Copyright (c) 2011 Ethan Schoonover
+*/
 body {
+  background-color: #fdf6e3;
+  color: #657b83;
   margin: 0px auto;
   font-size: 18px;
   font-family: 'OFL Sorts Mill Goudy TT', Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif," "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   line-height: 1.5; }
+  body * {
+    color: #657b83; }
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    color: #586e75;
+    border-color: #657b83; }
+  body a, body a:active, body a:visited {
+    color: #586e75; }
   body > header > h1 {
     float: left;
     left: 5px;
@@ -106,20 +118,20 @@ body {
       body > header > nav li:not(:last-child):after {
         content: " ~"; }
       body > header > nav li a {
-        color: black;
+        color: #657b83;
         text-decoration: none;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); }
+        text-shadow: 2px 2px 2px #eee8d5; }
         body > header > nav li a:hover {
-          color: white;
-          text-shadow: 2px 2px 2px black;
-          background-color: #222;
+          color: #839496;
+          background-color: #002b36;
+          text-shadow: 2px 2px 2px #073642;
           -moz-border-radius: 15px;
           -webkit-border-radius: 15px;
           border-radius: 15px; }
       body > header > nav li a {
         padding: 18px; }
   body .group:nth-child(odd) {
-    background: #eaeaf2; }
+    background: #eee8d5; }
   body .group > header h1 {
     display: block;
     left: 5px;
@@ -143,13 +155,13 @@ body {
       float: left;
       list-style-type: none; }
       body .group > ul li a {
-        color: black;
+        color: #657b83;
         text-decoration: none;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); }
+        text-shadow: 2px 2px 2px #eee8d5; }
         body .group > ul li a:hover {
-          color: white;
-          text-shadow: 2px 2px 2px black;
-          background-color: #222;
+          color: #839496;
+          background-color: #002b36;
+          text-shadow: 2px 2px 2px #073642;
           -moz-border-radius: 15px;
           -webkit-border-radius: 15px;
           border-radius: 15px; }
@@ -157,6 +169,6 @@ body {
         display: block;
         padding: 10px 32px; }
   body > footer {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #93a1a1;
     margin: 0px 5px;
     font-size: 14px; }
