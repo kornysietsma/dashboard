@@ -9,7 +9,12 @@ Dashboard.data = {
                         {"title":"The Dashboard project page on GitHub","url":"https://github.com/kornysietsma/dashboard"}
                     ]
                 },
-                {   name: "Social",
+                {   name: "Mobile",
+                     tags: [
+                         {"title":"Dolphin blog","url":"http://blog.dolphin-browser.com/","m_only":true}
+                         ]
+                 },
+                 {   name: "Social",
                     tags: [
                         {"title":"Gmail","url":"http://mail.google.com"},
                         {"title":"Twitter","url":"http://twitter.com/"},
@@ -26,8 +31,9 @@ Dashboard.data = {
                     ] },
                 {   name: "Other",
                     tags: [
-                        {"title":"Calendar","url":"http://calendar.google.com"},
-                        {"title":"Delicious","url":"http://delicious.com/"},
+                        {"title":"Google","m_title":"mobile Google","url":"http://google.com","m_url":"http://m.google.com"},
+                        {"title":"Calendar","url":"http://calendar.google.com", "d_only":true},
+                        {"title":"Delicious","url":"http://delicious.com/","m_url":"http://m.delicious.com"},
                         {"title":"Trunk.ly","url":"http://trunk.ly"},
                         {"title":"DropBox","url":"https://www.dropbox.com/"},
                         {"title":"Evernote","url":"https://www.evernote.com/Home.action"},
@@ -52,7 +58,7 @@ Dashboard.data = {
                         {"title":"reference","url":"http://clojure.org/Reference"},
                         {"title":"api","url":"http://clojure.github.com/clojure/"},
                         {"title":"cheatsheet","url":"http://clojure.org/cheatsheet"}
-                        ]
+                    ]
                 },
                 { name: "Scala",
                     tags: [

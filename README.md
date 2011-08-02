@@ -23,6 +23,15 @@ All tag data is in the file public/javascript/dashboard_data.js.  There is no se
 
 One day there might be a server to host this data via a JSON api, and a UI to edit it, but so far editing json by hand has been good enough for me, and a lot less work!
 
+*New* There are now special attributes for mobile versions (currently based on browser width - resize down to 600px and you'll see the mobile version):
+
+* d_only = true - this tag is desktop only
+* m_only = true - this tag is mobile only
+* m_url - special value of url for mobile (i.e. m.delicious.com)
+* m_title - special value of title for mobile (i.e. short names for small screens)
+
+A section with no visible tags won't show up. (There is no other way to disable a section - sorry, if you are keen, fork it yourself!)
+
 ## Building the css
 There is almost no "build" step in this site - but if you want to change any css, you'll need to buld the css from the base .scss files:
 
