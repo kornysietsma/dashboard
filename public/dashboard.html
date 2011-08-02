@@ -6,8 +6,15 @@
     <title>
       Dashboard
     </title>
-    <script src="javascript/modernizr-1.6.js"></script>
-    <link rel="stylesheet" href="stylesheets/dashboard.css"/>
+
+    <!-- Mobile viewport optimization http://goo.gl/b9SaQ -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/dashboard.css?v=1"/>
   </head>
   <body>
 <section class="nojsWarning"><h1>Warning!</h1><p>You appear to have Javascript disabled - this site will not
@@ -70,12 +77,26 @@ work reliably</p></section>
       {{/errors}}
     </ul>
 </script>
-<script src="javascript/jquery-1.5.js"></script>
-<script src="javascript/underscore.js"></script>
-<script src="javascript/ba-debug.js"></script>
-<script src="javascript/jquery.ba-hashchange.js"></script>
-<script src="javascript/handlebars-0.9.0.pre.4.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.1.6/underscore-min.js"></script>
+<script src="javascript/ba-debug.min.js"></script>
+<script src="javascript/jquery.ba-hashchange.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0.beta2/handlebars.min.js"></script>
 <script src="javascript/dashboard.js"></script>
 <script src="data/dashboard_data.js"></script>
+
+<script src="javascript/mobileboiler/helper.js"></script>
+<script>
+   // iPhone Scale Bug Fix, read this when using http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug/
+   MBP.scaleFix();
+
+   // Media Queries Polyfill https://github.com/shichuan/mobile-html5-boilerplate/wiki/Media-Queries-Polyfill
+   yepnope({
+     test : Modernizr.mq('(min-width)'),
+     nope : ['javascript/mobileboiler/respond.min.js']
+   });
+ </script>
+
 </body>
 </html>

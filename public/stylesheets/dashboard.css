@@ -85,13 +85,23 @@ table {
 /* Colours from the solarized project: http://ethanschoonover.com/solarized
   Copyright (c) 2011 Ethan Schoonover
 */
+/* various bits from  http://html5boilerplate.com/mobile/ */
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: none; }
+
+.nocallout {
+  -webkit-touch-callout: none; }
+
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; }
+
 body {
   background-color: #fdf6e3;
   color: #657b83;
   margin: 0px auto;
-  font-size: 18px;
-  font-family: 'OFL Sorts Mill Goudy TT', Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif," "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
-  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   line-height: 1.5; }
   body * {
@@ -101,10 +111,25 @@ body {
     border-color: #657b83; }
   body a, body a:active, body a:visited {
     color: #586e75; }
+  @media (max-width: 599px) {
+    body {
+      font-size: 14px;
+      font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif; } }
+  @media (min-width: 600px) {
+    body {
+      font-size: 18px;
+      font-family: 'OFL Sorts Mill Goudy TT', Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif," "Bitstream Vera Serif", "Liberation Serif", Georgia, serif; } }
+  @media (min-width: 600px) {
+    body {
+      text-rendering: optimizeLegibility; } }
   body > header > h1 {
     float: left;
     left: 5px;
     top: 5px; }
+    @media (max-width: 599px) {
+      body > header > h1 {
+        left: 2px;
+        top: 2px; } }
   body > header > nav {
     margin: 0 auto;
     width: 75%;
@@ -112,24 +137,33 @@ body {
     text-align: center;
     font-style: italic;
     font-size: 48px; }
+    @media (max-width: 599px) {
+      body > header > nav {
+        font-size: 24px; } }
     body > header > nav li {
       display: inline;
       list-style-type: none; }
       body > header > nav li:not(:last-child):after {
         content: " ~"; }
-      body > header > nav li a {
-        color: #657b83;
-        text-decoration: none;
-        text-shadow: 2px 2px 2px #eee8d5; }
-        body > header > nav li a:hover {
-          color: #839496;
-          background-color: #002b36;
-          text-shadow: 2px 2px 2px #073642;
-          -moz-border-radius: 15px;
-          -webkit-border-radius: 15px;
-          border-radius: 15px; }
-      body > header > nav li a {
-        padding: 18px; }
+      @media (max-width: 599px) {
+        body > header > nav li a {
+          color: #657b83;
+          text-decoration: none;
+          text-shadow: 2px 2px 2px #eee8d5; } }
+      @media (min-width: 600px) {
+        body > header > nav li a {
+          color: #657b83;
+          text-decoration: none;
+          text-shadow: 2px 2px 2px #eee8d5; }
+          body > header > nav li a:hover {
+            color: #839496;
+            background-color: #002b36;
+            text-shadow: 2px 2px 2px #073642;
+            -moz-border-radius: 15px;
+            -webkit-border-radius: 15px;
+            border-radius: 15px; }
+        body > header > nav li a {
+          padding: 18px; } }
   body .group:nth-child(odd) {
     background: #eee8d5; }
   body .group > header h1 {
@@ -139,6 +173,11 @@ body {
     font-size: 32px;
     font-style: italic;
     margin: 18px 0 0; }
+    @media (max-width: 599px) {
+      body .group > header h1 {
+        left: 3px;
+        font-size: 16px;
+        margin: 9px 0 0; } }
   body .group > ul {
     display: block;
     font-size: 48px;
@@ -150,25 +189,42 @@ body {
       height: 0;
       clear: both;
       visibility: hidden; }
+    @media (max-width: 599px) {
+      body .group > ul {
+        font-size: 24px;
+        margin: 2px auto; } }
     body .group > ul li {
       display: block;
       float: left;
       list-style-type: none; }
-      body .group > ul li a {
-        color: #657b83;
-        text-decoration: none;
-        text-shadow: 2px 2px 2px #eee8d5; }
-        body .group > ul li a:hover {
-          color: #839496;
-          background-color: #002b36;
-          text-shadow: 2px 2px 2px #073642;
-          -moz-border-radius: 15px;
-          -webkit-border-radius: 15px;
-          border-radius: 15px; }
+      @media (max-width: 599px) {
+        body .group > ul li a {
+          color: #657b83;
+          text-decoration: none;
+          text-shadow: 2px 2px 2px #eee8d5; } }
+      @media (min-width: 600px) {
+        body .group > ul li a {
+          color: #657b83;
+          text-decoration: none;
+          text-shadow: 2px 2px 2px #eee8d5; }
+          body .group > ul li a:hover {
+            color: #839496;
+            background-color: #002b36;
+            text-shadow: 2px 2px 2px #073642;
+            -moz-border-radius: 15px;
+            -webkit-border-radius: 15px;
+            border-radius: 15px; } }
       body .group > ul li a {
         display: block;
         padding: 10px 32px; }
+        @media (max-width: 599px) {
+          body .group > ul li a {
+            padding: 5px 16px; } }
   body > footer {
     border-top: 1px solid #93a1a1;
     margin: 0px 5px;
     font-size: 14px; }
+    @media (max-width: 599px) {
+      body > footer {
+        margin: 0px 2px;
+        font-size: 7px; } }

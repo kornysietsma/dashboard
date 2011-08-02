@@ -47,6 +47,13 @@ Dashboard.data = {
                         {"title":"sinatra","url":"http://www.sinatrarb.com/documentation"}
                     ]
                 },
+                { name: "Clojure",
+                    tags: [
+                        {"title":"reference","url":"http://clojure.org/Reference"},
+                        {"title":"api","url":"http://clojure.github.com/clojure/"},
+                        {"title":"cheatsheet","url":"http://clojure.org/cheatsheet"}
+                        ]
+                },
                 { name: "Scala",
                     tags: [
                         {"title":"scala","url":"http://www.scala-lang.org/api/current/index.html"},
@@ -58,6 +65,7 @@ Dashboard.data = {
                 },
                 { name: "Other",
                     tags: [
+                        {"title":"coffeescript","url":"http://jashkenas.github.com/coffee-script/"},
                         {"title":"mongodb","url":"http://www.mongodb.org/display/DOCS/Home"},
                         {"title":"cucumber","url":"https://github.com/aslakhellesoy/cucumber/wiki/"},
                         {"title":"webdriver","url":"http://selenium.googlecode.com/svn/trunk/docs/api/rb/index.html"}

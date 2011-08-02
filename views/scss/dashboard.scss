@@ -9,6 +9,9 @@ if you want to make changes! */
 
 @import "solarized";
 
+@import "mobile_boiler";
+
+
 @mixin linkwidget {
   a {
     color: $base00;
@@ -22,6 +25,13 @@ if you want to make changes! */
     } // hover
   } // a
 }
+@mixin mobilelink {
+  a {
+    color: $base00;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px $base2;
+  }
+}
 
 @import "fonts";
 
@@ -30,10 +40,18 @@ body {
 
   margin: 0px auto;
 
+@media (max-width: 599px) {
+  font-size: 14px;
+  @include helvetica-arial-fonts;
+}
+@media (min-width: 600px) {
   font-size: 18px;
   @include goudy-webfont-fonts;
+}
 
-  text-rendering: optimizeLegibility;
+  @media (min-width: 600px) { // desktop only - weird stuff on android browser
+    text-rendering: optimizeLegibility;
+  }
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
 
@@ -42,6 +60,10 @@ body {
       float: left;
       left: 5px;
       top: 5px;
+      @media (max-width: 599px) {
+        left: 2px;
+        top: 2px;
+      }
     }
     > nav {
       margin: 0 auto;
@@ -50,6 +72,9 @@ body {
       text-align: center;
       font-style: italic;
       font-size: 48px;
+      @media (max-width: 599px) {
+        font-size: 24px;
+      }
 
       li {
         display: inline;
@@ -57,9 +82,14 @@ body {
         &:not(:last-child):after {
           content: " ~";
         }
-        @include linkwidget;
-        a {
-          padding: 18px;
+        @media (max-width: 599px) {
+          @include mobilelink;
+        }
+        @media (min-width: 600px) { // desktop
+          @include linkwidget;
+          a {
+            padding: 18px;
+          }
         }
       }
     } // nav
@@ -75,20 +105,37 @@ body {
       font-size: 32px;
       font-style: italic;
       margin: 18px 0 0;
+      @media (max-width: 599px) {
+        left: 3px;
+        font-size: 16px;
+        margin: 9px 0 0;
+      }
     } // header
     > ul {
       @include clearfix;
       font-size: 48px;
       margin: 5px auto;
       width: 80%;
+      @media (max-width: 599px) {
+        font-size: 24px;
+        margin: 2px auto;
+      }
       li {
         display: block;
         float: left;
         list-style-type: none;
-        @include linkwidget;
+        @media (max-width: 599px) {
+          @include mobilelink;
+        }
+        @media (min-width: 600px) { // desktop
+          @include linkwidget;
+        }
         a {
           display: block;
           padding: 10px 32px;
+          @media (max-width: 599px) {
+            padding: 5px 16px;
+          }
         }
       }
     } // ul
@@ -98,5 +145,9 @@ body {
     border-top: 1px solid $base1;
     margin: 0px 5px;
     font-size: 14px;
+    @media (max-width: 599px) {
+      margin: 0px 2px;
+      font-size: 7px;
+    }
   }
 } // body

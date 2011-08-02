@@ -1,0 +1,14 @@
+/* various bits from  http://html5boilerplate.com/mobile/ */
+
+body {
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: none;
+}
+
+.nocallout {-webkit-touch-callout: none;}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
